@@ -48,9 +48,9 @@ export default function HeroSection() {
                 <Image
                   src="/topu.png"
                   alt="Abstract Object"
-                  height={500}
-                  width={500}
-                  className="h-auto w-full max-w-lg object-contain"
+                  height={400}
+                  width={400}
+                  className="h-auto max-w-lg object-contain"
                 />
               </div>
             </div>
@@ -71,22 +71,7 @@ export default function HeroSection() {
                       src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/396e9/MainBefore.jpg"
                       alt="Nvidia Logo"
                       height="20"
-                    />
-                  </div>
-                  <div className="flex">
-                    <Image
-                      className="mx-auto h-5 w-fit dark:invert"
-                      src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/396e9/MainBefore.jpg"
-                      alt="Nvidia Logo"
-                      height="20"
-                    />
-                  </div>
-                  <div className="flex">
-                    <Image
-                      className="mx-auto h-5 w-fit dark:invert"
-                      src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/396e9/MainBefore.jpg"
-                      alt="Nvidia Logo"
-                      height="20"
+                      width="100"
                     />
                   </div>
                 </InfiniteSlider>
