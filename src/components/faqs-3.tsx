@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { DynamicIcon, type IconName } from "lucide-react/dynamic";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 type FAQItem = {
   id: string;
@@ -79,12 +80,15 @@ export default function FAQsThree() {
                 Frequently Asked Questions
               </h2>
               <p className="text-muted-foreground mt-4">
-                Can not find what you are looking for? Contact our{" "}
+                Not finding what you need? I am always open to conversations.
                 <Link
-                  href="#"
-                  className="text-primary font-medium hover:underline"
+                  href="https://calendly.com/sahadathosen-dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  customer support team
+                  <h4 className="font-bold text-green-500 hover:text-green-600">
+                    Book 1:1 Call
+                  </h4>
                 </Link>
               </p>
             </div>

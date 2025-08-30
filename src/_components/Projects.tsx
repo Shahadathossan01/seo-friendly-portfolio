@@ -9,19 +9,21 @@ interface Project {
   liveUrl: string;
   gitHubLink?: string | null;
   duration: number;
+  caseStudyLink: string;
   tackStack: string[];
   features: { title: string }[];
 }
 
-const ProjectCard: React.FC = () => {
+const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       name: "Sureline Health",
       description:
-        "SurelineHealth.com is a full-featured healthcare management web application built using the MERN stack. It streamlines the digital consultation process by connecting patients, doctors, and health hubs through a secure, role-based system. From online appointments to real-time video consultations and prescription sharing, the platform ensures an efficient healthcare experience for all user types.",
+        "SurelineHealth.com is a full-featured healthcare management platform built with the MERN stack. It connects patients, doctors, health hubs, and admins through a secure, role-based system. The platform supports online appointment booking, real-time video consultations, prescription management, and promo code rewards, while providing dedicated dashboards for different user roles. With JWT authentication, admin controls, and activity monitoring, SurelineHealth ensures a safe, efficient, and streamlined digital healthcare experience.",
       image: "/project-surelineHealth.png",
       liveUrl: "https://www.surelinehealth.com/",
       gitHubLink: null,
+      caseStudyLink: "#",
       duration: 6,
       tackStack: [
         "MongoDB",
@@ -86,6 +88,7 @@ const ProjectCard: React.FC = () => {
       image: "/lms.png",
       liveUrl: "#",
       gitHubLink: "#",
+      caseStudyLink: "#",
       duration: 8,
       tackStack: [
         "MongoDB",
@@ -111,6 +114,7 @@ const ProjectCard: React.FC = () => {
       image: "/emsPhoto.png",
       liveUrl: "#",
       gitHubLink: "#",
+      caseStudyLink: "#",
       duration: 7,
       tackStack: [
         "MongoDB",
@@ -132,27 +136,21 @@ const ProjectCard: React.FC = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-10 grid gap-8 md:grid-cols-2 xl:grid-cols-2">
-      {projects.map((project, index) => (
-        <div
-          key={index}
-          className="bg-gray-900 border border-white/20 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
-        >
-          {/* Image Section */}
+    <div id="projects" className="pt-20 mb-15">
+      <h2 className="text-balance text-4xl font-semibold lg:text-5xl flex justify-center">
+        Projects
+      </h2>
+      <div className="container mt-10 mx-auto px-4 py-10 grid xl:gap-10 sm:gap-20 md:gap-2 gap-1 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project, index) => (
           <div
-            className="h-72 bg-top bg-cover transition-all duration-[4000ms] hover:bg-bottom"
-            style={{ backgroundImage: `url(${project.image})` }}
-          ></div>
-
-          {/* Content Section */}
-          <div className="p-6 flex flex-col gap-4">
-            <h2 className="text-xl font-bold text-center">
-              {index + 1}. {project.name}
-            </h2>
-
-            <p className="text-gray-300">{project.description}</p>
-
-            {/* Links */}
+            key={index}
+            className="bg-gray-900 border border-white/20 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
+            {/* Image Section */}
+            <div
+              className="h-72 bg-top bg-cover transition-all duration-[4000ms] hover:bg-bottom"
+              style={{ backgroundImage: `url(${project.image})` }}
+            ></div>
             <div className="flex justify-evenly items-center mt-4">
               <Link
                 href={project.liveUrl}
@@ -175,43 +173,60 @@ const ProjectCard: React.FC = () => {
               ) : (
                 <span className="flex items-center gap-2 text-gray-500 cursor-not-allowed">
                   {/* <GitHubIcon className="w-5 h-5" />  */}
-                  Private Project
+                  Source Code
                 </span>
               )}
+              <Link
+                href={project.caseStudyLink}
+                target="_blank"
+                className="flex items-center gap-2 text-white hover:text-green-400"
+              >
+                {/* <LinkIcon className="w-6 h-6" />  */}
+                Case Study
+              </Link>
             </div>
 
-            {/* Tech Stack */}
-            <div>
-              <div className="flex items-center gap-2">
-                {/* <BuildIcon className="w-5 h-5" /> */}
-                <span className="font-bold text-white">Tech Stack:</span>
-              </div>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {project.tackStack.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-2 py-1 border border-white rounded-full text-sm font-semibold text-white hover:bg-white/10 transition"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
+            {/* Content Section */}
+            <div className="p-6 flex flex-col gap-4">
+              <h2 className="text-xl font-bold text-center text-white">
+                {index + 1}. {project.name}
+              </h2>
 
-            {/* Features */}
-            <div>
+              <p className="text-gray-300">{project.description}</p>
+
+              {/* Tech Stack */}
+              <div>
+                <div className="flex items-center gap-2">
+                  {/* <BuildIcon className="w-5 h-5" /> */}
+                  <span className="font-bold text-white">Tech Stack:</span>
+                </div>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {project.tackStack.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-2 py-1 border border-white rounded-full text-sm font-semibold text-white hover:bg-white/10 transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Features */}
+              {/* <div>
               <h3 className="font-bold text-white mb-2">Key Features:</h3>
               <ul className="list-disc list-inside text-gray-300 space-y-1">
                 {project.features.map((feature, i) => (
                   <li key={i}>{feature.title}</li>
                 ))}
               </ul>
+            </div> */}
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
 
-export default ProjectCard;
+export default Projects;

@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card";
 
 export default function ContactForm() {
   return (
-    <section className="py-32">
+    <section className="">
       <div className="mx-auto max-w-3xl px-8 lg:px-0">
         <Card className="mx-auto mt-12 max-w-lg p-8 shadow-md sm:p-16">
           <div>
@@ -15,8 +15,7 @@ export default function ContactForm() {
               Lets get you to the right place
             </h2>
             <p className="mt-4 text-sm">
-              Reach out to our sales team! We’re eager to learn more about how
-              you plan to use our application.
+              Write a valuable message, How can I help you!
             </p>
           </div>
 

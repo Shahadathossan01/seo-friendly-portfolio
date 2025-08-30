@@ -2,12 +2,7 @@ import { FC } from "react";
 
 const Versity: FC = () => {
   return (
-    <div
-      data-aos="fade-right"
-      data-aos-offset="100"
-      data-aos-easing="ease-in-sine"
-      className="flex justify-start mt-5"
-    >
+    <div className="flex justify-start mt-15">
       <div className="bg-[#191b1f] text-white p-5 max-w-xl rounded-lg shadow-lg">
         <h3 className="text-lg font-bold">
           B.Sc. in Computer Science and Engineering
@@ -23,12 +18,7 @@ const Versity: FC = () => {
 
 const College: FC = () => {
   return (
-    <div
-      data-aos="flip-left"
-      data-aos-easing="ease-out-cubic"
-      data-aos-duration="2000"
-      className="flex justify-end mt-5"
-    >
+    <div className="flex justify-end mt-5">
       <div className="bg-[#191b1f] text-white p-5 max-w-xl rounded-lg shadow-lg">
         <h3 className="text-lg font-bold">
           Higher Secondary Certificate (HSC) – Science
@@ -44,15 +34,10 @@ const College: FC = () => {
 
 const Education: FC = () => {
   return (
-    <section className="my-12 px-4">
-      <h2
-        data-aos="fade-up"
-        className="text-3xl md:text-4xl font-bold text-center mt-16"
-      >
+    <section className=" p-20">
+      <h2 className="text-balance text-4xl font-semibold lg:text-5xl flex justify-center">
         Education
       </h2>
-      <div className="w-52 h-[3px] bg-blue-600 mx-auto my-3"></div>
-
       {/* Cards */}
       <Versity />
       <College />

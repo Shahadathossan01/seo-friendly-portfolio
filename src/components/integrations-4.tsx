@@ -7,8 +7,8 @@ import LogoCloud from "./logo-cloud";
 
 export default function IntegrationsSection() {
   return (
-    <section>
-      <div className="bg-muted dark:bg-background py-24 md:py-32">
+    <section id="skills">
+      <div className="bg-muted dark:bg-background py-20">
         <div className="mx-auto max-w-lg space-y-6 text-center">
           <h2 className="text-balance text-3xl font-semibold md:text-4xl">
             SKILLS
@@ -19,7 +19,7 @@ export default function IntegrationsSection() {
             <Link href="#">Full Stack Developer</Link>
           </Button>
         </div>
-        <div className="mx-auto max-w-5xl px-6">
+        <div className="mx-auto max-w-5xl px-6 pb-5">
           <div className="relative mx-auto flex max-w-sm items-center justify-between">
             <div className="space-y-6">
               <IntegrationCard position="left-top">

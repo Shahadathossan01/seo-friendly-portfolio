@@ -1,35 +1,44 @@
 import Link from "next/link";
 
+const menuItems = [
+  { name: "Home", href: "/" },
+  { name: "Service", href: "#service" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
+
 const links = [
   {
-    title: "Features",
-    href: "#",
+    title: "Home",
+    href: "/",
   },
   {
-    title: "Solution",
-    href: "#",
-  },
-  {
-    title: "Customers",
-    href: "#",
-  },
-  {
-    title: "Pricing",
-    href: "#",
-  },
-  {
-    title: "Help",
-    href: "#",
+    title: "Service",
+    href: "#service",
   },
   {
     title: "About",
-    href: "#",
+    href: "#about",
+  },
+  {
+    title: "Skills",
+    href: "#skills",
+  },
+  {
+    title: "Projects",
+    href: "#projects",
+  },
+  {
+    title: "Contact",
+    href: "#contact",
   },
 ];
 
 export default function FooterSection() {
   return (
-    <footer className="py-16 md:py-32">
+    <footer className="py-10 md:py-20">
       <div className="mx-auto max-w-5xl px-6">
         <Link href="/" aria-label="go home" className="mx-auto block size-fit">
           {/* <Logo /> */}
@@ -47,7 +56,7 @@ export default function FooterSection() {
           ))}
         </div>
         <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
-          <Link
+          {/* <Link
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -66,9 +75,9 @@ export default function FooterSection() {
                 d="M10.488 14.651L15.25 21h7l-7.858-10.478L20.93 3h-2.65l-5.117 5.886L8.75 3h-7l7.51 10.015L2.32 21h2.65zM16.25 19L5.75 5h2l10.5 14z"
               ></path>
             </svg>
-          </Link>
+          </Link> */}
           <Link
-            href="#"
+            href="https://www.linkedin.com/in/sahadathosendev"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -88,7 +97,7 @@ export default function FooterSection() {
             </svg>
           </Link>
           <Link
-            href="#"
+            href="https://www.facebook.com/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -108,6 +117,27 @@ export default function FooterSection() {
             </svg>
           </Link>
           <Link
+            href="https://github.com/Shahadathossan01"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="text-muted-foreground hover:text-primary block"
+          >
+            <svg
+              className="size-6"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66c.5.1.68-.22.68-.48c0-.24-.01-.87-.01-1.71c-2.78.61-3.37-1.37-3.37-1.37c-.45-1.17-1.1-1.48-1.1-1.48c-.9-.63.07-.62.07-.62c1 .07 1.53 1.06 1.53 1.06c.89 1.55 2.34 1.1 2.91.84c.09-.66.35-1.1.63-1.35c-2.22-.26-4.56-1.14-4.56-5.06c0-1.12.39-2.04 1.03-2.76c-.1-.26-.45-1.3.1-2.71c0 0 .84-.27 2.75 1.05c.8-.23 1.65-.34 2.5-.34c.85 0 1.7.12 2.5.34c1.91-1.32 2.75-1.05 2.75-1.05c.55 1.41.2 2.45.1 2.71c.64.72 1.03 1.64 1.03 2.76c0 3.93-2.34 4.8-4.57 5.06c.36.32.68.95.68 1.91c0 1.38-.01 2.49-.01 2.83c0 .26.18.59.69.48A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2"
+              />
+            </svg>
+          </Link>
+
+          {/* <Link
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -131,7 +161,7 @@ export default function FooterSection() {
                 color="currentColor"
               ></path>
             </svg>
-          </Link>
+          </Link> */}
           <Link
             href="#"
             target="_blank"
@@ -152,7 +182,7 @@ export default function FooterSection() {
               ></path>
             </svg>
           </Link>
-          <Link
+          {/* <Link
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -171,12 +201,23 @@ export default function FooterSection() {
                 d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"
               ></path>
             </svg>
+          </Link> */}
+        </div>
+        <div className="flex justify-center items-center gap-2">
+          <p className="text-muted-foreground block text-center text-sm">
+            {" "}
+            © {new Date().getFullYear()} Sahadat Hosen.
+          </p>
+          <Link
+            href="https://calendly.com/sahadathosen-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h4 className="font-bold text-green-500 hover:text-green-600">
+              Book 1:1 Call
+            </h4>
           </Link>
         </div>
-        <span className="text-muted-foreground block text-center text-sm">
-          {" "}
-          © {new Date().getFullYear()} Tailark, All rights reserved
-        </span>
       </div>
     </footer>
   );

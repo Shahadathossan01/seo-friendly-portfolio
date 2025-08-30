@@ -7,10 +7,12 @@ import React from "react";
 import { ModeToggle } from "./mode-toggle";
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
+  { name: "Home", href: "/" },
+  { name: "Service", href: "#service" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export const HeroHeader = () => {
@@ -27,9 +29,9 @@ export const HeroHeader = () => {
               <Link
                 href="/"
                 aria-label="home"
-                className="flex items-center space-x-2"
+                className="flex items-center space-x-2 text-2xl font-bold"
               >
-                <Logo />
+                PORTFOLIO
               </Link>
 
               <button
@@ -41,13 +43,13 @@ export const HeroHeader = () => {
                 <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
               </button>
 
-              <div className="hidden lg:block">
-                <ul className="flex gap-8 text-sm">
+              <div className="hidden lg:block ml-35">
+                <ul className="flex gap-12 text-sm">
                   {menuItems.map((item, index) => (
                     <li key={index}>
                       <Link
                         href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        className=" hover:text-accent-foreground block duration-150 font-bold"
                       >
                         <span>{item.name}</span>
                       </Link>
@@ -64,7 +66,7 @@ export const HeroHeader = () => {
                     <li key={index}>
                       <Link
                         href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        className="hover:text-accent-foreground block duration-150 font-bold"
                       >
                         <span>{item.name}</span>
                       </Link>
@@ -72,17 +74,31 @@ export const HeroHeader = () => {
                   ))}
                 </ul>
               </div>
+
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button asChild variant="outline" size="sm">
-                  <Link href="#">
-                    <span>Login</span>
+                <Button className="bg-blue-500 hover:bg-blue-600 text-white px-2">
+                  <Link
+                    href="https://www.linkedin.com/in/sahadathosendev"
+                    target="_blank"
+                  >
+                    <div className="flex justify-center items-center gap-2">
+                      <svg
+                        className="size-5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"
+                        ></path>
+                      </svg>
+                      <p>LinkedIn</p>
+                    </div>
                   </Link>
                 </Button>
-                <Button asChild size="sm">
-                  <Link href="#">
-                    <span>Sign Up</span>
-                  </Link>
-                </Button>
+
                 <ModeToggle></ModeToggle>
               </div>
             </div>

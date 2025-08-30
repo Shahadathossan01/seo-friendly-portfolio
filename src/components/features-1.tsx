@@ -1,58 +1,69 @@
+"use client";
+
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 import { ReactNode } from "react";
 
-const services = [
-  {
-    title: "Full Stack Web Development",
-    description:
-      "I deliver end-to-end full-stack development — from responsive frontend design to scalable backend systems and databases.",
-    logo: "/fullStackLogo.png",
-  },
-  {
-    title: "Backend (REST API) Development",
-    description:
-      "I build scalable backends with Node.js, Express, and MongoDB — delivering secure, high-performance APIs and reliable database solutions for seamless integration.",
-    logo: "/backendLogo.png",
-  },
-  {
-    title: "React.js Frontend",
-    description:
-      "I build dynamic frontend solutions using React.js that update in real-time, ensuring your web applications display data seamlessly and interactively. Delivering fast, responsive, and engaging user experiences, we turn your ideas into high-performance interfaces that adapt to your users’ needs.",
-    logo: "/reactJsLogo.png",
-  },
-  {
-    title: "SEO-Friendly Next.js Websites",
-    description:
-      "Professional Next.js SEO optimization to make your website faster, more search-engine-friendly, and highly discoverable. Enhance rankings, attract organic traffic, and ensure your web application reaches its full potential.",
-    logo: "/next-js.svg",
-  },
-  {
-    title: "Responsive Design",
-    description:
-      "I create fully responsive websites that look and perform perfectly on any device. From desktops to smartphones, your site will deliver a seamless and engaging user experience, ensuring your audience can access your content anytime, anywhere.",
-    logo: "/responsiveLogo.png",
-  },
-  {
-    title: "VPS Deployment",
-    description:
-      "Professional VPS deployment services — I set up, configure, and optimize your server so your web applications run securely, efficiently, and without downtime.",
-    logo: "/vpsLogo.png",
-  },
-];
-
 export default function Features() {
+  const services = [
+    {
+      title: "Full Stack Web Development",
+      description:
+        "I deliver end-to-end full-stack development — from responsive frontend design to scalable backend systems and databases.",
+      logo: "/fullStackLogo.png",
+    },
+    {
+      title: "Backend (REST API) Development",
+      description:
+        "I build scalable backends with Node.js, Express, and MongoDB — delivering secure, high-performance APIs and reliable database solutions for seamless integration.",
+      logo: "/backendLogo.png",
+    },
+    {
+      title: "React.js Frontend",
+      description:
+        "I build dynamic frontend solutions using React.js that update in real-time, ensuring your web applications display data seamlessly and interactively. Delivering fast, responsive, and engaging user experiences.",
+      logo: "/reactJsLogo.png",
+    },
+    {
+      title: "SEO-Friendly Next.js Websites",
+      description:
+        "Professional Next.js SEO optimization to make your website faster, more search-engine-friendly, and highly discoverable. Enhance rankings, attract organic traffic, and ensure your web application reaches its full potential.",
+      logo: "/nextJsLogo2.png",
+    },
+    {
+      title: "Responsive Design",
+      description:
+        "I create fully responsive websites that look and perform perfectly on any device. From desktops to smartphones, your site will deliver a seamless and engaging user experience, ensuring your audience can access your content anytime, anywhere.",
+      logo: "/responsiveLogo.png",
+    },
+    {
+      title: "VPS Deployment",
+      description:
+        "Professional VPS deployment services — I set up, configure, and optimize your server so your web applications run securely, efficiently, and without downtime.",
+      logo: "/vpsLogo.png",
+    },
+  ];
   return (
-    <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
+    <section
+      id="service"
+      className="bg-zinc-50 py-10 md:py-20 dark:bg-transparent"
+    >
       <div className="@container mx-auto max-w-5xl px-6">
         <div className="text-center">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
-            Built to cover your needs
+            Helping You Stand Out
           </h2>
-          <p className="mt-4">
-            Libero sapiente aliquam quibusdam aspernatur, praesentium iusto
-            repellendus.
-          </p>
+          <p className="mt-4">Services that enhance your digital presence.</p>
+          <Link
+            href="https://calendly.com/sahadathosen-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h4 className="font-bold text-green-500 hover:text-green-600">
+              Book 1:1 Call
+            </h4>
+          </Link>
         </div>
         <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16">
           {services.map((item, index) => (

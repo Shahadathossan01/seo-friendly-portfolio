@@ -1,5 +1,6 @@
 import React from "react";
 import ContactForm from "@/components/contact";
+import Link from "next/link";
 
 interface SocialLink {
   name: string;
@@ -17,23 +18,17 @@ const ContactSection: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-100">
-      <div className="text-center mb-12">
-        <h3 className="text-4xl font-bold mb-3" data-aos="fade-up">
+    <section id="contact" className="py-20">
+      <div className="text-center">
+        <h2 className="text-balance text-4xl font-semibold lg:text-5xl flex justify-center">
           Contact
-        </h3>
-        <div className="w-40 h-1 mx-auto bg-primary mb-3"></div>
+        </h2>
       </div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 pt-15">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Contact Info */}
-          <div
-            className="bg-gray-900 text-white rounded-xl p-8 flex flex-col justify-center shadow-lg"
-            data-aos="fade-right"
-            data-aos-offset="200"
-            data-aos-easing="ease-in-sine"
-          >
+          <div className="bg-gray-900 text-white rounded-xl p-8 flex flex-col justify-center shadow-lg">
             <h4 className="text-3xl font-bold mb-2">Don’t Say,</h4>
             <h5 className="text-2xl mb-4 pl-4">I Am Free!!</h5>
             <p className="text-center text-lg mb-6" data-aos="zoom-in">
@@ -50,6 +45,15 @@ const ContactSection: React.FC = () => {
               <p>
                 📍 Address: <strong>Kishoreganj, Dhaka, Bangladesh</strong>
               </p>
+              <Link
+                href="https://calendly.com/sahadathosen-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h4 className="font-bold text-green-500 hover:text-green-600">
+                  Book 1:1 Call
+                </h4>
+              </Link>
             </div>
 
             {/* Social Links */}
