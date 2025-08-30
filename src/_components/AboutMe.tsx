@@ -1,7 +1,6 @@
 "use client";
 
-import { FC, ReactNode } from "react";
-import { CheckCircle2 } from "lucide-react";
+import { FC } from "react";
 import { useTheme } from "next-themes";
 
 type ProblemSolution = {
@@ -212,23 +211,5 @@ const MyIntro: FC = () => {
     </div>
   );
 };
-
-// ✅ Props typing for Highlight component
-interface HighlightProps {
-  text: ReactNode;
-  aos?: string;
-  duration?: number;
-}
-
-const Highlight: FC<HighlightProps> = ({ text, aos, duration }) => (
-  <p
-    data-aos={aos}
-    data-aos-duration={duration?.toString() || "1000"}
-    className="text-sm md:text-base text-gray-400 flex items-center gap-2"
-  >
-    <CheckCircle2 className="text-blue-500 w-5 h-5" />
-    {text}
-  </p>
-);
 
 export default AboutMe;

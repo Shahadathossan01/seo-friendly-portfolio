@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/accordion";
 import { DynamicIcon, type IconName } from "lucide-react/dynamic";
 import Link from "next/link";
-import { Button } from "./ui/button";
 
 type FAQItem = {
   id: string;
